@@ -30,7 +30,7 @@ const projects = [
     description: 'A powerful, easy-to-use URL shortener with custom links, instant redirects, and link previews.',
     imageUrl: shortenedLinkImg,
     liveUrl: 'https://shortened-link.vercel.app/',
-    githubUrl: 'https://github.com/atifhasan-web/shortened-link',
+    githubUrl: 'https://github.com/Atifhasan250/shortened-link',
   },
   {
     id: '2',
