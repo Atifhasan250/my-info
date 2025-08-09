@@ -22,6 +22,7 @@ import { Input } from '@/components/ui/input';
 import shortenedLinkImg from './shortened-link.png';
 import capitalBalanceImg from './capital-balance.png';
 import shadJatraImg from './shad-jatra.png';
+import classnoteSorterImg from './classnote-sorter.png';
 
 const projects = [
   {
@@ -42,6 +43,14 @@ const projects = [
   },
   {
     id: '3',
+    title: "classnote Sorter",
+    description: 'Optimize your learning with Classnote Sorter, an AI-powered web app for effortless organization and management of PDF class notes.',
+    imageUrl: classnoteSorterImg,
+    liveUrl: 'https://classnote-sorter.vercel.app/',
+    githubUrl: 'https://github.com/Atifhasan250/classnote-sorter',
+  },
+  {
+    id: '4',
     title: "Capital Balance",
     description: 'Track and manage your personal capital with ease. This project is a finance dashboard built with Next.js, React, TypeScript, Tailwind CSS, and Recharts for data visualization.',
     imageUrl: capitalBalanceImg,
