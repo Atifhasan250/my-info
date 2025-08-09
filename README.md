@@ -2,7 +2,6 @@
 
 -   **Personalized Profile**: Display your avatar, name, and a short bio.
 -   **Social Links**: A dedicated section to feature your social media profiles with clean, recognizable icons.
--   **Customizable Links**: Add and manage a list of important links, such as your portfolio or latest project.
 -   **Projects Showcase**: A separate, searchable page to display your projects with images, descriptions, and links to live demos and GitHub repositories.
 -   **Image Pop-up**: Click on project images to view them in a full-sized, responsive dialog.
 -   **Theming**: Seamlessly switch between a beautiful dark mode and a clean light mode. The preference is saved in the browser.
