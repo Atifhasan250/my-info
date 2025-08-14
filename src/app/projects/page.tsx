@@ -22,6 +22,7 @@ import { Input } from '@/components/ui/input';
 import shortenedLinkImg from './shortened-link.png';
 import capitalBalanceImg from './capital-balance.png';
 import shadJatraImg from './shad-jatra.png';
+import intelliplanImg from './intelliplan.png';
 import classnoteSorterImg from './classnote-sorter.png';
 
 const projects = [
@@ -35,6 +36,14 @@ const projects = [
   },
   {
     id: '2',
+    title: "IntelliPlan",
+    description: 'Your all-in-one Next.js study planner with task management, goal setting, and timer to focus. (For students)',
+    imageUrl: intelliplanImg,
+    liveUrl: 'https://intelliplan.vercel.app/',
+    githubUrl: 'https://github.com/Atifhasan250/intelliplan',
+  },
+  {
+    id: '3',
     title: "Shad Jatra",
     description: 'Explore the rich flavors of Bangladeshi cuisine. Step-by-step guides in a user-friendly web app.',
     imageUrl: shadJatraImg,
@@ -42,7 +51,7 @@ const projects = [
     githubUrl: 'https://github.com/Atifhasan250/shad-jatra',
   },
   {
-    id: '3',
+    id: '4',
     title: "classnote Sorter",
     description: 'Optimize your learning with Classnote Sorter, an AI-powered web app for effortless organization and management of PDF class notes.',
     imageUrl: classnoteSorterImg,
@@ -50,7 +59,7 @@ const projects = [
     githubUrl: 'https://github.com/Atifhasan250/classnote-sorter',
   },
   {
-    id: '4',
+    id: '5',
     title: "Capital Balance",
     description: 'Track and manage your personal capital with ease. This project is a finance dashboard built with Next.js, React, TypeScript, Tailwind CSS, and Recharts for data visualization.',
     imageUrl: capitalBalanceImg,
