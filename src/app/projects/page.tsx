@@ -24,23 +24,24 @@ import capitalBalanceImg from './capital-balance.png';
 import shadJatraImg from './shad-jatra.png';
 import intelliplanImg from './intelliplan.png';
 import classnoteSorterImg from './classnote-sorter.png';
+import monthlyPlanner from './monthlyPlanner.png';
 
 const projects = [
   {
     id: '1',
-    title: 'Shortened Link',
-    description: 'A powerful, easy-to-use URL shortener with custom links, instant redirects, and link previews.',
-    imageUrl: shortenedLinkImg,
-    liveUrl: 'https://shortened-link.vercel.app/',
-    githubUrl: 'https://github.com/Atifhasan250/shortened-link',
-  },
-  {
-    id: '2',
     title: "IntelliPlan",
-    description: 'Your all-in-one Next.js study planner with task management, goal setting, and timer to focus. (For students)',
+    description: 'Your all-in-one study planner with task management, goal setting, and timer to focus. (For students)',
     imageUrl: intelliplanImg,
     liveUrl: 'https://intelliplan.vercel.app/',
     githubUrl: 'https://github.com/Atifhasan250/intelliplan',
+  },
+  {
+    id: '2',
+    title: 'Monthly Todo Planner',
+    description: 'A monthly goal planner that helps you keep track of your progress and tracks daily habit. (Android App)',
+    imageUrl: monthlyPlanner,
+    liveUrl: 'https://monthly-todo-planner.netlify.app/',
+    githubUrl: 'https://github.com/Atifhasan250/monthly-todo-planner',
   },
   {
     id: '3',
@@ -65,6 +66,14 @@ const projects = [
     imageUrl: capitalBalanceImg,
     liveUrl: 'https://capital-balance.vercel.app/',
     githubUrl: 'https://github.com/Atifhasan250/capital-balance',
+  },
+  {
+    id: '6',
+    title: 'Shortened Link',
+    description: 'A powerful, easy-to-use URL shortener with custom links, instant redirects, and link previews.',
+    imageUrl: shortenedLinkImg,
+    liveUrl: 'https://shortened-link.vercel.app/',
+    githubUrl: 'https://github.com/Atifhasan250/shortened-link',
   },
 ];
 
@@ -138,14 +147,14 @@ export default function ProjectsPage() {
       <div className="flex flex-col items-center min-h-screen bg-background text-foreground font-body">
         <nav className="sticky top-0 z-50 w-full backdrop-blur-sm bg-background/80 border-b border-border">
           <div className="w-full max-w-4xl mx-auto p-3">
-              <div className="flex justify-between items-center">
-                  <Link href="/" className="cursor-pointer">
-                    <LogoIcon className="h-6 w-6 text-foreground" />
-                  </Link>
-                  <Button onClick={toggleTheme} size="icon" variant="outline">
-                      {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-                  </Button>
-              </div>
+            <div className="flex justify-between items-center">
+              <Link href="/" className="cursor-pointer">
+                <LogoIcon className="h-6 w-6 text-foreground" />
+              </Link>
+              <Button onClick={toggleTheme} size="icon" variant="outline">
+                {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              </Button>
+            </div>
           </div>
         </nav>
         <main className="w-full max-w-4xl mx-auto p-4 sm:p-6 md:p-8">
@@ -155,16 +164,16 @@ export default function ProjectsPage() {
           </header>
 
           <div className="mb-8 max-w-lg mx-auto">
-              <div className="relative">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                  <Input
-                      type="text"
-                      placeholder="Search projects by name or description..."
-                      className="w-full pl-10"
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                  />
-              </div>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+              <Input
+                type="text"
+                placeholder="Search projects by name or description..."
+                className="w-full pl-10"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
           </div>
 
           <Dialog open={isDialogOpen} onOpenChange={(isOpen) => {
@@ -181,9 +190,9 @@ export default function ProjectsPage() {
                     setIsDialogOpen(true);
                   }}>
                     <div className="relative overflow-hidden h-64 cursor-pointer">
-                      <Image 
-                        src={project.imageUrl} 
-                        alt={project.title} 
+                      <Image
+                        src={project.imageUrl}
+                        alt={project.title}
                         fill
                         className="object-cover object-top w-full h-full transition-transform duration-300 group-hover:scale-105"
                       />
@@ -218,9 +227,9 @@ export default function ProjectsPage() {
               <DialogContent className="w-[90vw] max-w-4xl p-0 bg-transparent border-0 max-h-[90vh] overflow-y-auto">
                 <DialogTitle className="sr-only">Project Image</DialogTitle>
                 <DialogDescription className="sr-only">Full-sized view of the project image.</DialogDescription>
-                <Image 
-                  src={selectedImage} 
-                  alt="Selected Project Image" 
+                <Image
+                  src={selectedImage}
+                  alt="Selected Project Image"
                   className="w-full h-auto rounded-lg"
                 />
                 <DialogClose className="absolute right-[-2rem] top-[-1rem] rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
@@ -232,12 +241,12 @@ export default function ProjectsPage() {
           </Dialog>
 
           <div className="mt-12 flex justify-start">
-              <Link href="/" passHref>
-                  <Button variant="outline">
-                      <ArrowLeft className="mr-2 h-4 w-4" />
-                      Go Back
-                  </Button>
-              </Link>
+            <Link href="/" passHref>
+              <Button variant="outline">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Go Back
+              </Button>
+            </Link>
           </div>
         </main>
         <footer className="w-full max-w-4xl mx-auto p-4 text-center text-muted-foreground border-t border-border">
