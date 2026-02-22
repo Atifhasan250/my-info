@@ -38,7 +38,7 @@ const projects = [
   {
     id: '2',
     title: 'Monthly Todo Planner',
-    description: 'A monthly goal planner that helps you keep track of your progress and tracks daily habit. (Android App)',
+    description: 'A monthly goal planner that helps you keep track of your progress and tracks daily habit.',
     imageUrl: monthlyPlanner,
     liveUrl: 'https://monthly-todo-planner.netlify.app/',
     githubUrl: 'https://github.com/Atifhasan250/monthly-todo-planner',
