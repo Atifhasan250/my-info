@@ -1,20 +1,14 @@
-"use client";
+'use client';
 
-import { cn } from "@/lib/utils";
-import { useState, useEffect } from "react";
+import { cn } from '@/lib/utils';
 
-export const Preloader = () => {
-  const [visible, setVisible] = useState(true);
+interface PreloaderProps {
+  visible?: boolean;
+}
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(false);
-    }, 500); // fade out duration
-    return () => clearTimeout(timer);
-  }, []);
-
+export const Preloader = ({ visible = true }: PreloaderProps) => {
   return (
-    <div className={cn("preloader", !visible && "hidden")}>
+    <div className={cn('preloader', !visible && 'hidden')}>
       <div className="spinner"></div>
     </div>
   );

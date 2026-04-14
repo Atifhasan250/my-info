@@ -1,65 +1,73 @@
+# Atif Hasan - Link Portal & Projects Gallery
+
+A professional, high-performance link aggregator and project portfolio tailored for tech professionals. Built specifically for **Atif Hasan**, a Full Stack Web and Mobile App Developer based in Bogura, Bangladesh. This application serves as a sleek alternative to standard Linktrees, providing an advanced interactive interface out-of-the-box.
+
+![Portfolio Preview](./public/preview.png)
+
 ## Features
 
--   **Personalized Profile**: Display your avatar, name, and a short bio.
--   **Social Links**: A dedicated section to feature your social media profiles with clean, recognizable icons.
--   **Projects Showcase**: A separate, searchable page to display your projects with images, descriptions, and links to live demos and GitHub repositories.
--   **Image Pop-up**: Click on project images to view them in a full-sized, responsive dialog.
--   **Theming**: Seamlessly switch between a beautiful dark mode and a clean light mode. The preference is saved in the browser.
--   **Responsive Design**: A mobile-first design that looks great on all devices, from phones to desktops.
+- **Dynamic Link Aggregation**: Seamlessly direct users to all relevant social networks, open-source repositories, and contact forms.
+- **Project Gallery**: A dedicated section to showcase web and mobile app dev experiments, detailed with tech stack tags and featured highlights.
+- **Admin Dashboard**: Full CRUD (Create, Read, Update, Delete) capability allowing the developer to manage links, projects, and profiles effortlessly—without touching the source code.
+- **Optimized for SEO**: Built with robust Next.js server-side features ensuring high discoverability on Google.
+- **Fully Responsive**: Crafted meticulously with Tailwind CSS to ensure a pristine experience on both desktop layout and mobile devices.
+- **Dark/Light Mode**: Integrated theme toggling powered by Next Themes.
 
+## Technology Stack
 
-## Tech Stack
-
--   **Framework**: [Next.js](https://nextjs.org/) (App Router)
--   **Language**: [TypeScript](https://www.typescriptlang.org/)
--   **UI**: [React](https://reactjs.org/)
--   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
--   **Component Library**: [ShadCN UI](https://ui.shadcn.com/)
--   **Icons**: [Lucide React](https://lucide.dev/guide/packages/lucide-react)
+- **Framework**: [Next.js](https://nextjs.org/) (App Router, React 18)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) & [Shadcn UI](https://ui.shadcn.com/)
+- **Database**: MongoDB with [Mongoose](https://mongoosejs.com/)
+- **Authentication**: JWT & custom hashed cookies
+- **Media Hosting**: ImageKit.io
+- **Deployment**: Vercel
 
 ## Getting Started
 
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
-
 ### Prerequisites
 
-You need to have [Node.js](https://nodejs.org/en/) (version 18 or later) and npm installed on your machine.
+You need [Node.js](https://nodejs.org/) installed along with a MongoDB database URL and an ImageKit developer account.
 
-### Installation
+### Local Installation
 
-1.  **Clone the repository:**
-    ```sh
-    git clone https://github.com/atifhasan-web/info.git
-    cd info
-    ```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/atifhasan250/my-info.git
+   cd my-info
+   ```
 
-2.  **Install dependencies:**
-    ```sh
-    npm install
-    ```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-3.  **Run the development server:**
-    ```sh
-    npm run dev
-    ```
+3. **Configure Environment Variables**:
+   Duplicate the `.env.local.example` file to `.env.local` and substitute the respective API keys:
+   ```env
+   MONGODB_URI=your_mongodb_cluster_uri
+   ADMIN_USERNAME=admin
+   ADMIN_PASSWORD=your_secure_password
+   JWT_SECRET=your_jwt_secret
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+   IMAGEKIT_PUBLIC_KEY=your_imagekit_public
+   IMAGEKIT_PRIVATE_KEY=your_imagekit_private
+   IMAGEKIT_URL_ENDPOINT=https://ik.imagekit.io/your_id/
+   ```
 
-## Deployment
+4. **Run the Development Server**:
+   ```bash
+   npm run dev
+   ```
 
-This project is optimized for deployment on [Vercel](https://vercel.com/), the platform from the creators of Next.js.
+5. **Access the App**:
+   Visit `http://localhost:3000` to view the public profile, and `http://localhost:3000/admin` to manage your data using the interactive dashboard.
 
-To deploy your version of Linkify, follow these steps:
+## Contact & Links
 
-1.  Push your code to a new GitHub repository.
-2.  Go to the [Vercel dashboard](https://vercel.com/new) and import your repository.
-3.  Vercel will automatically detect that you are using Next.js and will configure the build settings for you.
-4.  Deploy! Your Linkify app will be live on a public URL.
+- **Website**: [atifs-info.vercel.app](https://atifs-info.vercel.app/)
+- **Location**: Bogura, Bangladesh
+- **Profession**: Web & Mobile App Developer, Full Stack Developer
 
-The included `vercel.json` file ensures that the deployment process is smooth and requires no manual configuration.
+## License
 
-## Acknowledgements
-
--   Built with the powerful **Next.js** framework.
--   Styled with the versatile **Tailwind CSS**.
--   Components from the excellent **ShadCN UI** library.
+This project is open-source and available under the MIT License. See the [LICENSE](LICENSE) file for more information.
